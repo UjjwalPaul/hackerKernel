@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>display records</title>
+</head>
+<body>
+  <h2 align="center">All Records</h2> <hr color="blue">
+  <table border="1" align="center">
+  	<tr>
+  		<th>Name</th>
+  		<th>Email</th>
+  		<th>Mobile No</th>
+  		<th>Delete</th>
+  	</tr>
+
+   {% for i in data %}
+    
+      <tr>
+      	<td>{{i.name}}</td>
+      	<td>{{i.email}}</td>
+      	<td>{{i.mobile}}</td>
+      	<td><a href="delete_user/{{i.id}}"> Delete_user</a></td>
+       
+      </tr>
+
+   {% endfor %}
+
+  </table>

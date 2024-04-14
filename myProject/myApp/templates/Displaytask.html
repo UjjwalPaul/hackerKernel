@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>display records</title>
+</head>
+<body>
+  <h2 align="center">All Records</h2> <hr color="blue">
+  <table border="1" align="center">
+  	<tr>
+  		<th>User</th>
+  		<th>Task type</th>
+  		<th>task</th>
+  		<th>Delete task</th>
+  	</tr>
+
+   {% for i in data %}
+    
+      <tr>
+      	<td>{{i.email}}</td>
+      	<td>{{i.pending}}</td>
+      	<td>{{i.taskdetails}}</td>
+      	<td><a href="delete_task/{{i.id}}"> Delete_task</a></td>
+       
+      </tr>
+
+   {% endfor %}
+
+  </table>
